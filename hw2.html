@@ -21,7 +21,8 @@ def logistic(r,s) :
   s = r*s*(1-s)
   x = x+1
   print(r,s)
- return r*s(1-s)
+  return r*s(1-s)
+ return logistic(r,s)
 
 """2. 작성한 함수를 이용하여 다음의 조건에서 n=1 에서 20까지 로지스틱 맵의 값을 구하여라."""
 
@@ -42,18 +43,18 @@ $n$번째 피보나치 수를 구하는 함수를 프로그래밍하여라.
 """
 
 # 피보나치 함수 정의
-def logistic(n) :
+def Fib(n) :
  if n <= 1 :
   return 1
  if n <= 2 :
    return 1 
- return logistic(n-1)+logistic(n-2)
+ return Fib(n-1)+Fib(n-2)
 
 #n번째 피보나치 수($F_n$) 구하기
  # (ex) n=3, 5, 9, 12
-logistic(3), logistic(6), logistic(9), logistic(12)
+Fib(3), Fib(6), Fib(9), Fib(12)
 
 #n번째까지의 피보나치 수 구하기
  # (ex) 10번째까지
 for i in range(1,11) :
- print(logistic(i))
+ print(Fib(i))
